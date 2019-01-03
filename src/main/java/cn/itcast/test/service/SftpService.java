@@ -26,8 +26,8 @@ public class SftpService {
 
         SFTPUtil sftpUtil = new SFTPUtil(username, password, host, port);
         boolean login = sftpUtil.login();
-        sftpUtil.checkPath(path);
+        boolean check = sftpUtil.checkPath(path);
         boolean logout = sftpUtil.logout();
-        return new SFTPConfig(username, password, port, host, login, logout);
+        return new SFTPConfig(username, password, port, host, login, logout, check);
     }
 }

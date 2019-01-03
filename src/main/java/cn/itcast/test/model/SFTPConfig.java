@@ -8,6 +8,15 @@ public class SFTPConfig {
     private String host;
     private boolean login;
     private boolean logout;
+    private boolean check;
+
+    public boolean isCheck() {
+        return check;
+    }
+
+    public void setCheck(boolean check) {
+        this.check = check;
+    }
 
     public String getUsername() {
         return username;
@@ -57,12 +66,13 @@ public class SFTPConfig {
         this.logout = logout;
     }
 
-    public SFTPConfig(String username, String password, int port, String host, boolean login, boolean logout) {
+    public SFTPConfig(String username, String password, int port, String host, boolean login, boolean logout, boolean check) {
         this.username = username;
         this.password = password;
         this.port = port;
         this.host = host;
         this.login = login;
         this.logout = logout;
+        this.check = check;
     }
 }
